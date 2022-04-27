@@ -10,7 +10,7 @@ class Countdown extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Key Practice'),
+        title: const Text('Smooth Scalez'),
       ),
       body: BlocBuilder<MusicCubit, List<String>>(
         builder: (context, keys) {
@@ -45,6 +45,7 @@ class _CountdownViewState extends State<CountdownView> {
   reset() {
     setState(() {
       List<String> charactersMinusActiveKey =
+          // TODO Fix so duplicate keys aren't shown in a row
           // activeKey == null ? widget.keys : widget.keys.remove(activeKey);
           widget.keys;
       activeKey = charactersMinusActiveKey[
@@ -81,6 +82,7 @@ class _CountdownViewState extends State<CountdownView> {
                 child: CircularProgressIndicator(
                   backgroundColor: Color.fromRGBO(0, 0, 0, 1),
                   value: 1,
+                  // TODO Fix so circular progress indicator is updated
                   // value: (1 - (widget.timeLeft / widget.maxTime))!,
                   strokeWidth: 10,
                 ),

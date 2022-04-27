@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider<MusicCubit>(
       create: (context) => MusicCubit(),
       child: MaterialApp(
-        title: 'Key Practice',
+        title: 'Smooth Scalez',
         theme: ThemeData(
           primarySwatch: Colors.amber,
         ),
@@ -113,7 +113,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Key Practice'),
+        title: const Text('Smooth Scalez'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
