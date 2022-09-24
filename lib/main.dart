@@ -97,8 +97,7 @@ class KeyButtons extends StatelessWidget {
       return SingleChildScrollView(
         child: Column(
           children: [
-            Lottie.network(
-                'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
+            Lottie.asset('assets/lottie-note.json'),
             Row(
               children: [
                 Expanded(
