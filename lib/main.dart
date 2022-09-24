@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 
 import 'countdown.dart';
 
@@ -94,14 +95,20 @@ class KeyButtons extends StatelessWidget {
     return BlocBuilder<MusicCubit, List<String>>(
         builder: (context, selectedKeys) {
       return SingleChildScrollView(
-        child: Row(
+        child: Column(
           children: [
-            Expanded(
-                child: buildKeyColumn(context.read<MusicCubit>(), 'Major',
-                    majorKeys, selectedKeys)),
-            Expanded(
-                child: buildKeyColumn(context.read<MusicCubit>(), 'Minor',
-                    minorKeys, selectedKeys))
+            Lottie.network(
+                'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
+            Row(
+              children: [
+                Expanded(
+                    child: buildKeyColumn(context.read<MusicCubit>(), 'Major',
+                        majorKeys, selectedKeys)),
+                Expanded(
+                    child: buildKeyColumn(context.read<MusicCubit>(), 'Minor',
+                        minorKeys, selectedKeys))
+              ],
+            ),
           ],
         ),
       );
